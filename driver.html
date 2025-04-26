@@ -1,0 +1,79 @@
+<!-- driver.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4">Driver Dashboard</h1>
+    <p>Welcome to your dashboard. Here you can access and manage all your bidding activities and account settings.</p>
+
+    <h3 class="mt-5">1. Registration and Login</h3>
+    <form class="mb-4">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" id="contact" placeholder="Enter contact number">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <button class="btn btn-primary">Login</button>
+      <a href="#" class="d-block mt-2">Forgot Password?</a>
+    </form>
+
+    <h3 class="mt-4">2. Bidding Management</h3>
+    <div class="mb-4">
+      <p>Ongoing Bids:</p>
+      <ul>
+        <li>Bid #123 - Item A</li>
+        <li>Bid #124 - Item B</li>
+      </ul>
+      <button class="btn btn-outline-primary">Participate in Live Bidding</button>
+      <div class="mt-3">
+        <label for="maxBid" class="form-label">Set Max Bid Limit</label>
+        <input type="number" class="form-control" id="maxBid" placeholder="Enter max bid amount">
+      </div>
+    </div>
+
+    <h3 class="mt-4">3. Payment Information</h3>
+    <div class="mb-4">
+      <p>Invoice History:</p>
+      <ul>
+        <li>Invoice #001 - $200</li>
+        <li>Invoice #002 - $150</li>
+      </ul>
+      <button class="btn btn-outline-secondary">Download Receipts</button>
+    </div>
+
+    <h3 class="mt-4">4. Notifications & Alerts</h3>
+    <div class="mb-4">
+      <ul>
+        <li>Email Alert: You have been outbid on Bid #123</li>
+        <li>Push Notification: Auction for Item B is closing soon</li>
+      </ul>
+      <button class="btn btn-outline-info">Manage Notification Preferences</button>
+    </div>
+
+    <h3 class="mt-4">5. User Dashboard</h3>
+    <div class="mb-4">
+      <p>Bidding History:</p>
+      <ul>
+        <li>Item A - Bid: $180</li>
+        <li>Item B - Bid: $120</li>
+      </ul>
+      <a href="#" class="btn btn-outline-dark">Edit Account Settings</a>
+    </div>
+
+    <a href="index.html" class="btn btn-primary mt-4">Back to Home</a>
+  </div>
+</body>
+</html>

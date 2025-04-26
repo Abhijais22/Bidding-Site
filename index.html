@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction Bidding Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    
+    body { font-family: 'Segoe UI', sans-serif; }
+    .carousel-item {
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    /* Glassmorphism effect */
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      animation: slideIn 0.6s ease;
+    }
+    
+    /* Smooth Slide Animation */
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Fancy glowing button */
+    #loginForm button {
+      background: linear-gradient(135deg, #6f86d6, #48c6ef);
+      border: none;
+      color: white;
+      transition: 0.4s;
+    }
+    #loginForm button:hover {
+      background: linear-gradient(135deg, #48c6ef, #6f86d6);
+      box-shadow: 0 0 15px rgba(72, 198, 239, 0.7);
+    }
+    .features-icon { font-size: 2rem; color: #0d6efd; margin-bottom: 15px; }
+    footer { background-color: #212529; color: white; padding: 20px 0; text-align: center; }
+  </style>
+ 
+   
+        
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">AuctionPro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#auctions">Live Auctions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Why Choose Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#roles">User Roles</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </li>
+          </ul>
+          
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel Start -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/1600x900/?auction,items');">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Discover Unique Items. Bid with Confidence.</h1>
+          <p>Secure and Transparent Auctions for Everyone</p>
+          <a href="#auctions" class="btn btn-primary btn-lg mt-3">Browse Auctions</a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/1600x900/?bidding,marketplace');">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Real-Time Bidding Experience</h1>
+          <p>Win exclusive items easily and securely</p>
+          <a href="#auctions" class="btn btn-primary btn-lg mt-3">Start Bidding</a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/1600x900/?online,auction');">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Trusted by Thousands</h1>
+          <p>Join our growing community of bidders today</p>
+          <a href="#auctions" class="btn btn-primary btn-lg mt-3">Join Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- Carousel End -->
+  
+
+<section id="auctions" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Live Auctions</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vintage Watch</h5>
+            <p class="card-text">Current Bid: $320</p>
+            <a href="#" class="btn btn-outline-primary">Place a Bid</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Antique Painting</h5>
+            <p class="card-text">Current Bid: $1,100</p>
+            <a href="#" class="btn btn-outline-primary">Place a Bid</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Collector Coins</h5>
+            <p class="card-text">Current Bid: $75</p>
+            <a href="#" class="btn btn-outline-primary">Place a Bid</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose AuctionPro</h2>
+    <div class="row text-center">
+      <div class="col-md-3">
+        <i class="fas fa-shield-alt features-icon"></i>
+        <h5>Secure Transactions</h5>
+        <p>SSL encryption and secure payments.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-bolt features-icon"></i>
+        <h5>Real-Time Bidding</h5>
+        <p>Fast and responsive live auctions.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-mobile-alt features-icon"></i>
+        <h5>Mobile Alerts</h5>
+        <p>Stay updated with real-time notifications.</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-cogs features-icon"></i>
+        <h5>Smart Auto-Bidding</h5>
+        <p>Let our bots win bids for you!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roles" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">User Dashboards</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Driver</h5>
+          <ul>
+            <li><a href="driver.html">Access Driver Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Carrier</h5>
+          <ul>
+            <li><a href="carrier.html">Access Carrier Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Admin</h5>
+          <ul>
+            <li><a href="admin.html">Access Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Get in Touch</h2>
+    <p class="text-center">Have questions? Email us at <strong>support@auctionpro.com</strong></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 2025 AuctionPro. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent form from submitting normally
+      
+      const role = document.getElementById('role').value;
+    
+      if (role === 'driver') {
+        window.location.href = 'driver.html';
+      } else if (role === 'carrier') {
+        window.location.href = 'carrier.html';
+      } else if (role === 'admin') {
+        window.location.href = 'admin.html';
+      } else {
+        alert('Please select a valid role.');
+      }
+    });
+    </script>
+    
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content glassmorphism">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to Your Dashboard</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Email / Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Select Role</label>
+              <select class="form-select" id="role" required>
+                <option value="" selected disabled>Choose role...</option>
+                <option value="driver">Driver</option>
+                <option value="carrier">Carrier</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
